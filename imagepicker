@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>	
+        <title>IMAGE PICKER</title></head>
+        <body style="margin: 200px"> 	
+            <center>	
+            <select onchange="gantigambar();" id="listgambar">			
+                <option value="background.jpg" style="width: 80 px;">PILIH KARAKTER</option>			
+                <option value="masjid nabawi.jpg" style="width: 80 px;">Masjid Nabawi</option>			
+                <option value="masjidil haram.jpg" style="width: 80 px;">Masjidil Haram</option>			
+                <option value="masjidil aqsa.jpg" style="width: 80 px;">Masjid al-Aqsa</option>				
+                <option value="masjid quba.jpg" style="width: 80 px;">Masjid Quba</option>
+                <option value="masjid istiqlal.jpg" style="width: 80 px;">Masjid Istiqlal</option>
+                <option value="kabah.jpg" style="width: 80 px;">kabah</option>		
+            </select>		
+            <br><br>	
+            <img src="background.jpg" style="width: 80 px" id="gambar">
+         
+            <script type="text/javascript">	
+                function gantigambar()
+                 {		
+                     let gambar = document.getElementById("listgambar").value;		
+                     document.getElementById("gambar").src = gambar;		
+                     alert("Ini Gambar " + gambar);	  
+                   }
+               </script>
+            </center>
+        </body>
+</html>
