@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>form validasi</title>
+</head>
+<body >
+  <center>
+  <h1>VALIDASI</h1>
+
+<body>
+<table border = "1" cellpadding = "10"><tr>
+<td>
+  <form action="">
+    <label for="">NAMA</label>&ensp;&ensp;&ensp;&ensp;
+    <input type="text" id="nama"><br><br>
+    <label for="">EMAIL</label>&ensp;&ensp;&ensp;&ensp;
+    <input type="email" id="email"><br><br>
+    <label for="">WAKTU</label>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+    <input type="time" id="waktu" min="00.00" max="23.59"><br><br>
+    <label for="">TUJUAN</label>&ensp;&ensp;&ensp;
+    <input type="text" id="destinasi"><br><br>
+    <label for=""> TIKET </label>&ensp;&ensp;&ensp;&ensp;&nbsp;
+    <input type="number" id="tiket"><br><br>
+    <button type="button" onclick="validasi()">SUBMIT</button>
+</td>
+</table></tr>
+</body>
+  </form>
+ <h1 id="namapelanggan"></h1>
+ <h1 id="emailpelanggan"></h1>
+ <h1 id="waktupemberangkatan"></h1>
+ <h1 id="destinasipelanggan"></h1>
+ <h1 id="tiketpelanggan"></h1> 
+
+<script>
+  function validasi(){
+    let nama = document.getElementById('nama').value;
+    let email = document.getElementById('email').value;
+    let waktu = document.getElementById('waktu').value;
+    let destinasi = document.getElementById('destinasi').value;
+    let tiket = document.getElementById('tiket').value;
+
+    if (nama == "" || nama.leght >30) {
+      alert("nama tidak boleh kosong");
+    }else if (email == "") {
+      alert("email tidak boleh kosong");
+    }else if (waktu == "") {
+      alert("waktu tidak boleh kosong");
+    }else if (destinasi == "") {
+      alert("destinasi tidak boleh kosong");
+    }else if (tiket == "") {
+      alert("tiket tidak boleh kosong");
+    }
+    else{
+      document.getElementById('namapelanggan').innerHTML = 'nama pelanggan :'+ nama + '<br>'
+      document.getElementById('emailpelanggan').innerHTML = 'email :' +email+'<br>'
+      document.getElementById('waktupemberangkatan').innerHTML = 'waktu :' +waktu+'<br>'
+      document.getElementById('destinasipelanggan').innerHTML = 'tujuan :' +destinasi+'<br>'
+      document.getElementById('tiketpelanggan').innerHTML = 'tiket :' +tiket+ '<br>'
+    }   
+  }
+</script>
+</center>
+</body>
+</html>
