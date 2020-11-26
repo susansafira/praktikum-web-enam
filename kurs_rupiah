@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurs Rupiah</title>
+</head>
+<body style="margin: 100px;">
+    <table border="1px" align="center" cellpadding="20px"><tr> <center>
+            <td>
+                    <br>
+                    <h1 align="center"> Kurs Mata Uang</h1>
+                    <br>
+                    <label for=""> Nilai Mata Uang </label>
+                    <input type="number" id="input_kurs" value="">
+                    <br><br>
+                    <input type="submit" value="Dollar US" onclick="Dollar()">
+                    <input type="submit" value="Riyal" onclick="Riyal()">
+                    <input type="submit" value="Ringgit" onclick="Ringgit()">
+                    <input type="submit" value="Yen" onclick="Yen()">
+                    <input type="submit" value="Euro" onclick="Euro()">
+                
+                    <p id="hasil"> Hasil dalam (Rp.): </p>
+                    <br>
+            
+                    <br>
+                    <script>
+                        function Dollar(){
+                        let input_kurs = document.getElementById('input_kurs').value;
+                        let hasil_kurs = input_kurs * 15000;
+                        document.getElementById("hasil").innerHTML = hasil_kurs;
+                        }
+                        function Riyal(){
+                        let input_kurs = document.getElementById('input_kurs').value;
+                        let hasil_kurs = input_kurs * 3592;
+                        document.getElementById("hasil").innerHTML = hasil_kurs;
+                        }
+                        function Ringgit(){
+                        let input_kurs = document.getElementById('input_kurs').value;
+                        let hasil_kurs = input_kurs * 3500;
+                        document.getElementById("hasil").innerHTML = hasil_kurs;
+                        }
+                        function Yen(){
+                        let input_kurs = document.getElementById('input_kurs').value;
+                        let hasil_kurs = input_kurs * 13000;
+                        document.getElementById("hasil").innerHTML = hasil_kurs;
+                        }
+                        function Euro(){
+                        let input_kurs = document.getElementById('input_kurs').value;
+                        let hasil_kurs = input_kurs * 16000;
+                        document.getElementById("hasil").innerHTML = hasil_kurs;
+                        }
+                    </script>
+            </td>
+    </table></tr></center>
+</body>
+</html>
